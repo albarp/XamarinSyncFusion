@@ -11,6 +11,7 @@ namespace XamarinSyncFusion
 	{
 		public MainPage()
 		{
+            // Master diverge test
 			InitializeComponent();
 		}
 	}
