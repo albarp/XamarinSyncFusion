@@ -13,7 +13,7 @@ namespace XamarinSyncFusion
 		{
 			InitializeComponent();
 
-			MainPage = new XamarinSyncFusion.MainPage();
+			MainPage = new XamarinSyncFusion.GettingStarted();
 		}
 
 		protected override void OnStart ()

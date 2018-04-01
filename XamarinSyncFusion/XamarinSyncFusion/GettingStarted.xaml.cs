@@ -7,9 +7,9 @@ using Xamarin.Forms;
 
 namespace XamarinSyncFusion
 {
-	public partial class MainPage : ContentPage
+	public partial class GettingStarted : ContentPage
 	{
-		public MainPage()
+		public GettingStarted()
 		{
             // Master diverge test
 			InitializeComponent();
