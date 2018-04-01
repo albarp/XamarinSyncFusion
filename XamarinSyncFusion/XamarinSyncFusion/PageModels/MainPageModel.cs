@@ -24,7 +24,9 @@ namespace XamarinSyncFusion
         {
             All = new List<MainPageModel>
             {
-                new MainPageModel(typeof(GettingStarted), "Getting Started", "Setup a chart")
+                new MainPageModel(typeof(GettingStarted), "Getting Started", "Setup a chart"),
+                new MainPageModel(typeof(PopulatingDataStdPage), "Populating Data", "Standard ChartDataPoint"),
+                new MainPageModel(typeof(PopulatingDataCustomPage), "Populating Data", "Custom source objects"),
             };
         }
 
