@@ -1,37 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="XamarinSyncFusion.PopulatingDataStdPage"
+             x:Class="XamarinSyncFusion.HighLowOpenClosePage"
              xmlns:local="clr-namespace:XamarinSyncFusion"
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
 
     <ContentPage.BindingContext>
-        <local:PopulatingDataStdPageModel></local:PopulatingDataStdPageModel>
+        <local:HighLowOpenClosePageModel></local:HighLowOpenClosePageModel>
     </ContentPage.BindingContext>
     
     <ContentPage.Content>
-
-        
-        
         <chart:SfChart>
 
             <chart:SfChart.PrimaryAxis>
                 <chart:CategoryAxis>
-                    
+
                 </chart:CategoryAxis>
             </chart:SfChart.PrimaryAxis>
 
             <chart:SfChart.SecondaryAxis>
                 <chart:NumericalAxis>
-                    
+
                 </chart:NumericalAxis>
             </chart:SfChart.SecondaryAxis>
 
             <chart:SfChart.Series>
-                <chart:ColumnSeries ItemsSource="{Binding HighTemperature}"/>
+                <chart:HiLoOpenCloseSeries  ItemsSource="{Binding Data}"/>
             </chart:SfChart.Series>
 
         </chart:SfChart>
-        
     </ContentPage.Content>
+    
+    
 </ContentPage>

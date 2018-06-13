@@ -27,6 +27,7 @@ namespace XamarinSyncFusion
                 new MainPageModel(typeof(GettingStarted), "Getting Started", "Setup a chart"),
                 new MainPageModel(typeof(PopulatingDataStdPage), "Populating Data", "Standard ChartDataPoint"),
                 new MainPageModel(typeof(PopulatingDataCustomPage), "Populating Data", "Custom source objects"),
+                new MainPageModel(typeof(HighLowOpenClosePage), "Populating Data", "Range Column Chart"),
             };
         }
 
