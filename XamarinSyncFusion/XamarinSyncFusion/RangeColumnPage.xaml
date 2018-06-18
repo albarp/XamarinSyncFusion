@@ -4,6 +4,16 @@
              x:Class="XamarinSyncFusion.RangeColumnPage"
              xmlns:local="clr-namespace:XamarinSyncFusion"
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <chart:ChartColorCollection x:Key="Colors">
+                <Color>Red</Color>
+                <Color>Gray</Color>
+            </chart:ChartColorCollection>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <ContentPage.BindingContext>
         <local:RangeColumnPageModel></local:RangeColumnPageModel>
     </ContentPage.BindingContext>
@@ -24,9 +34,26 @@
             </chart:SfChart.SecondaryAxis>
 
             <chart:SfChart.Series>
-                <chart:RangeColumnSeries ItemsSource="{Binding Data}" XBindingPath="Year" High="Max" Low="Min"></chart:RangeColumnSeries>
+
+                <chart:RangeColumnSeries 
+                    ItemsSource="{Binding Data}" 
+                    XBindingPath="Year" 
+                    High="Max" 
+                    Low="Min" 
+                    CornerRadius="15">
+
+                    <chart:RangeColumnSeries.ColorModel>
+                        <chart:ChartColorModel Palette="Custom" CustomBrushes="{StaticResource Colors}"/>
+                    </chart:RangeColumnSeries.ColorModel>
+
+                </chart:RangeColumnSeries>
+                
             </chart:SfChart.Series>
-            
+
+            <!--<chart:SfChart.ColorModel>
+                <chart:ChartColorModel Palette="Custom" CustomBrushes="{StaticResource Colors}"/>
+            </chart:SfChart.ColorModel>-->
+
         </chart:SfChart>
         
     </ContentPage.Content>
